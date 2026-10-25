@@ -1,6 +1,6 @@
 # The Canine Theory website
 
-A static marketing site for a dog training business, served by GitHub Pages at caninetheory.com. It has no framework and no build step: just `index.html`, `styles.css`, `script.js` and `images/`.
+A static marketing site for a dog training business, served by GitHub Pages at thecaninetheory.com. It has no framework and no build step: just `index.html`, `styles.css`, `script.js` and `images/`.
 
 ## Design rules (keep these consistent)
 - Colors: mustard yellow `#edd287` and teal `#7cb6b2` sections alternate, with dark ink `#2b2b2b` for text and buttons. They're defined as CSS variables in `:root`.
@@ -10,6 +10,7 @@ A static marketing site for a dog training business, served by GitHub Pages at c
 - The site must work on phones. Check the `@media (max-width: 900px)` rules when changing layouts.
 
 ## Notes
-- Once the custom domain is set up, keep the `CNAME` file; GitHub Pages needs it for caninetheory.com.
+- Keep the `CNAME` file; GitHub Pages needs it for thecaninetheory.com. The domain's DNS and email forwarding live in Cloudflare (see README).
+- The contact email is `hello@thecaninetheory.com` (in the footer of index.html and `CONTACT_EMAIL` in script.js).
 - The contact form posts to Formspree (`action` in index.html). `script.js` falls back to `mailto:` while the ID is still `YOUR_FORM_ID`.
 - Pushing to `main` publishes the site.

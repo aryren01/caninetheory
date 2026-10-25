@@ -1,6 +1,6 @@
 # The Canine Theory
 
-Website for **The Canine Theory** dog training, hosted free on GitHub Pages at **caninetheory.com**.
+Website for **The Canine Theory** dog training, hosted free on GitHub Pages at **thecaninetheory.com**.
 
 It's a plain HTML/CSS site with no build step:
 
@@ -21,14 +21,12 @@ It's a plain HTML/CSS site with no build step:
 - [ ] **Photos:** replace the images in `images/` with the full-quality originals. The current ones were cropped from screenshots. Also add `images/hero.jpg` (leash photo) and `images/single-session.jpg` (curly black dog).
 - [ ] **Descriptions:** add text for "Good Manners Group Class" and "One-on-One Behavior Coaching" in `index.html`.
 - [ ] **Social links:** add the X, Instagram and Facebook profile URLs in `index.html`.
-- [ ] **Email:** put her real email in `index.html` (footer) and `script.js` (`CONTACT_EMAIL`).
+- [x] **Email:** `hello@thecaninetheory.com` (Cloudflare Email Routing forwards it to her Gmail) is in `index.html` (footer) and `script.js` (`CONTACT_EMAIL`).
 - [ ] **Contact form:** create a free form at [formspree.io](https://formspree.io) and paste its ID over `YOUR_FORM_ID` in `index.html`. Until then, "Send" opens the visitor's email app.
 
-## Going live on caninetheory.com
+## Domain and email
 
-1. Buy `caninetheory.com` from a domain registrar (Namecheap, Porkbun, Cloudflare, etc.).
-2. On GitHub, go to **Settings → Pages**, set Source to **Deploy from a branch**, then choose `main` and `/ (root)`. The repo must be public on a free account.
-3. At the registrar, add these DNS records:
-   - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` record for `www` → `<github-username>.github.io`
-4. Back in **Settings → Pages**, enter `caninetheory.com` as the custom domain (this also adds a `CNAME` file to the repo). Once the DNS check passes, tick **Enforce HTTPS**.
+The domain **thecaninetheory.com** is registered at Cloudflare.
+
+- **Website:** in Cloudflare DNS, four `A` records for `@` point to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`, and a `CNAME` for `www` points to `aryren01.github.io`. All are set to **DNS only** (grey cloud) so GitHub can issue the HTTPS certificate. In GitHub, **Settings → Pages** has `thecaninetheory.com` as the custom domain, which created the `CNAME` file in this repo. Don't delete that file.
+- **Email:** Cloudflare **Email Routing** forwards `hello@thecaninetheory.com` to her Gmail. The `MX` and `TXT` records it created in DNS must stay.

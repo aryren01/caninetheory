@@ -15,7 +15,7 @@ nav.addEventListener("click", (e) => {
 // Contact form
 // GitHub Pages can't receive form submissions by itself, so this uses Formspree (free).
 // Until the form ID in index.html is set, "Send" opens the visitor's email app instead.
-const CONTACT_EMAIL = "hello@caninetheory.com";
+const CONTACT_EMAIL = "hello@thecaninetheory.com";
 const form = document.getElementById("contact-form");
 const status = form.querySelector(".form-status");
 
