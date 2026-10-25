@@ -147,9 +147,7 @@ p { margin: 0 0 1rem; }
 /* ===== Products (private sessions) ===== */
 .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5rem; margin-top: 4rem; }
 .product { display: flex; flex-direction: column; }
-.product img,
-.photo-placeholder { width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 1.5rem; }
-.photo-placeholder { background: rgba(43, 43, 43, .08); }
+.product img { width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 1.5rem; }
 .product .btn { margin-top: auto; }
 .product h3 { font-family: var(--body-font); font-size: 1.9rem; margin-bottom: .5rem; }
 .product .price { font-size: 1.5rem; }
