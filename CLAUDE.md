@@ -7,6 +7,8 @@ A static marketing site for a dog training business, served by GitHub Pages at t
 - Fonts: **Marcellus** for headings and **PT Serif** for body text, both loaded from Google Fonts.
 - Logo: `images/logo-mark.png` (dog and mountains, in the header next to the name), `images/logo.png` (full logo with text, transparent background) and `images/favicon.png` (browser tab icon).
 - Buttons are dark pill shapes (`.btn`). Service lists use `<details>` accordions inside `.accordion`.
+- Sections flow into each other with wavy edges (the `::before` waves in styles.css, colored to match the section above). Keep teal and yellow alternating so the waves line up.
+- Content fades up as it scrolls into view: script.js adds `.reveal`/`.in` to the elements listed in `revealTargets`. Add new elements there if they should animate. All motion is turned off for visitors with "reduce motion" set, and nothing is hidden if JavaScript doesn't run.
 - The design was copied from the owner's Squarespace draft, so new sections should match its look.
 - The site must work on phones. Check the `@media (max-width: 900px)` rules when changing layouts.
 

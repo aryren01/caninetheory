@@ -12,6 +12,33 @@ nav.addEventListener("click", (e) => {
   if (e.target.tagName === "A") nav.classList.remove("open");
 });
 
+// Header shadow once the page is scrolled
+const header = document.querySelector(".site-header");
+const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+// Fade sections in as they scroll into view, one item after another
+const revealTargets = document.querySelectorAll(
+  ".split-text > :not(.accordion), .accordion > details, .split-media, .about-text > *, .about-grid > img, " +
+  ".section > h2, .section > .lead, .services > h2, .product, .socials, .gallery > img, .contact-form, .site-footer > div"
+);
+if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("in");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+  revealTargets.forEach((el) => {
+    const siblings = [...el.parentElement.children].filter((c) => [...revealTargets].includes(c));
+    el.style.setProperty("--delay", `${Math.min(siblings.indexOf(el), 5) * 0.12}s`);
+    el.classList.add("reveal");
+    observer.observe(el);
+  });
+}
+
 // Contact form
 // GitHub Pages can't receive form submissions by itself, so this uses Formspree (free).
 // Until the form ID in index.html is set, "Send" opens the visitor's email app instead.
