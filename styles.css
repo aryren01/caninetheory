@@ -16,7 +16,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--yellow);
-  color: var(--ink);
+  color: var(--logo-blue);
   font-family: var(--body-font);
   font-size: 1.15rem;
   line-height: 1.6;
@@ -60,9 +60,9 @@ p { margin: 0 0 1rem; }
 .logo { display: flex; align-items: center; gap: .8rem; font-size: 1.8rem; color: var(--logo-blue); text-decoration: none; }
 .logo-mark { height: 52px; width: auto; }
 .site-nav { display: flex; gap: 2rem; }
-.site-nav a { color: var(--ink); text-decoration: none; }
+.site-nav a { color: var(--logo-blue); text-decoration: none; }
 .site-nav a:hover { text-decoration: underline; }
-.nav-toggle { display: none; background: none; border: 0; font-size: 1.8rem; color: var(--ink); cursor: pointer; }
+.nav-toggle { display: none; background: none; border: 0; font-size: 1.8rem; color: var(--logo-blue); cursor: pointer; }
 
 /* ===== Buttons ===== */
 .btn {
@@ -167,7 +167,7 @@ p { margin: 0 0 1rem; }
   border-radius: 18px;
   background: transparent;
   font: inherit;
-  color: var(--ink);
+  color: var(--logo-blue);
 }
 .contact-form button { display: block; min-width: 0; margin: 0 auto; padding: 1.4rem 2.6rem; }
 .form-status { text-align: center; margin-top: 1rem; }
@@ -183,7 +183,7 @@ p { margin: 0 0 1rem; }
   padding-right: 15vw;
 }
 .footer-title { font-size: clamp(2.4rem, 3.5vw, 3.6rem); margin-bottom: .5rem; }
-.footer-email { font-family: var(--heading-font); font-size: clamp(1.8rem, 3.5vw, 3.6rem); color: var(--ink); text-decoration: none; }
+.footer-email { font-family: var(--heading-font); font-size: clamp(1.8rem, 3.5vw, 3.6rem); color: var(--logo-blue); text-decoration: none; }
 
 /* ===== Mobile ===== */
 @media (max-width: 900px) {
