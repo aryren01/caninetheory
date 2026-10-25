@@ -95,7 +95,9 @@ p { margin: 0 0 1rem; }
 .split-text { max-width: 835px; }
 .split-media { justify-self: end; width: 100%; max-width: 835px; }
 .split-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
-.hero .split-media img { aspect-ratio: 3 / 4; }
+.hero .split-media img { aspect-ratio: 4 / 3; }
+/* The wave into the next section adds teal below the hero, so trim the bottom padding to keep the space even */
+.hero { padding-bottom: calc(clamp(60px, 8vw, 120px) - clamp(28px, 5vw, 72px) * .6); }
 
 /* ===== About ===== */
 .about-grid {
