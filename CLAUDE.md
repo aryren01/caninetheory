@@ -10,6 +10,6 @@ A static marketing site for a dog training business, served by GitHub Pages at c
 - The site must work on phones. Check the `@media (max-width: 900px)` rules when changing layouts.
 
 ## Notes
-- Keep the `CNAME` file; GitHub Pages needs it for the custom domain.
+- Once the custom domain is set up, keep the `CNAME` file; GitHub Pages needs it for caninetheory.com.
 - The contact form posts to Formspree (`action` in index.html). `script.js` falls back to `mailto:` while the ID is still `YOUR_FORM_ID`.
 - Pushing to `main` publishes the site.

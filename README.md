@@ -10,7 +10,6 @@ It's a plain HTML/CSS site with no build step:
 | `styles.css` | Colors, fonts, layout |
 | `script.js` | Mobile menu and contact form |
 | `images/` | Photos |
-| `CNAME` | Tells GitHub Pages to use caninetheory.com |
 
 ## Editing the site
 
@@ -32,4 +31,4 @@ It's a plain HTML/CSS site with no build step:
 3. At the registrar, add these DNS records:
    - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - `CNAME` record for `www` → `<github-username>.github.io`
-4. Back in **Settings → Pages**, enter `caninetheory.com` as the custom domain. Once the DNS check passes, tick **Enforce HTTPS**.
+4. Back in **Settings → Pages**, enter `caninetheory.com` as the custom domain (this also adds a `CNAME` file to the repo). Once the DNS check passes, tick **Enforce HTTPS**.
