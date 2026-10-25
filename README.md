@@ -19,6 +19,7 @@ It's a plain HTML/CSS site with no build step:
 ## Still to do
 
 - [ ] **Photos:** replace the images in `images/` with the full-quality originals. The current ones were cropped from screenshots. Also add `images/hero.jpg` (leash photo) and `images/single-session.jpg` (curly black dog).
+- [ ] **Package photos:** the Three-Session and Five-Session Package cards have empty photo boxes. Replace each `photo-placeholder` div in `index.html` with an `<img>`.
 - [x] **Descriptions:** all three Additional Services (Puppy Starter Course, Good Manners Group Class, One-on-One Behavior Coaching) have their text.
 - [x] **Social links:** Instagram links to @thecaninetheory; Facebook uses her page's share link. (She isn't on X, so that icon was removed.)
 - [x] **Email:** `hello@thecaninetheory.com` (Cloudflare Email Routing forwards it to her Gmail) is in `index.html` (footer) and `script.js` (`CONTACT_EMAIL`).

@@ -140,7 +140,11 @@ p { margin: 0 0 1rem; }
 
 /* ===== Products (private sessions) ===== */
 .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5rem; margin-top: 4rem; }
-.product img { width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 1.5rem; }
+.product { display: flex; flex-direction: column; }
+.product img,
+.photo-placeholder { width: 100%; aspect-ratio: 1; object-fit: cover; margin-bottom: 1.5rem; }
+.photo-placeholder { background: rgba(43, 43, 43, .08); }
+.product .btn { margin-top: auto; }
 .product h3 { font-family: var(--body-font); font-size: 1.9rem; margin-bottom: .5rem; }
 .product .price { font-size: 1.5rem; }
 
@@ -179,14 +183,16 @@ p { margin: 0 0 1rem; }
 .site-footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: baseline;
   flex-wrap: wrap;
-  gap: 2rem;
-  padding-left: 15vw;
-  padding-right: 15vw;
+  gap: .5rem 2rem;
+  padding-top: clamp(48px, 6.5vw, 96px);
+  padding-bottom: 2rem;
 }
-.footer-title { font-size: clamp(2.4rem, 3.5vw, 3.6rem); margin-bottom: .5rem; }
-.footer-email { font-family: var(--heading-font); font-size: clamp(1.8rem, 3.5vw, 3.6rem); color: var(--ink); text-decoration: none; }
+.footer-left { display: flex; align-items: baseline; gap: 1rem; }
+.footer-title { font-size: clamp(1.5rem, 2.2vw, 2.2rem); }
+.footer-left p { margin: 0; }
+.footer-email { font-family: var(--heading-font); font-size: clamp(1.3rem, 2vw, 2rem); color: var(--ink); text-decoration: none; }
 
 /* ===== Flow: wavy edges between sections ===== */
 /* Each section after the first gets a wave across its top in the color of the section above it. */
@@ -258,10 +264,9 @@ main .section.yellow + .section::before { background-image: url("data:image/svg+
   }
   .site-nav.open { display: flex; }
   .site-nav a { padding: .7rem 0; }
-  .site-footer { padding-left: var(--gutter); padding-right: var(--gutter); }
 }
 
 @media (max-width: 500px) {
   .contact-form .row { grid-template-columns: 1fr; }
-  .footer-email { font-size: 1.2rem; overflow-wrap: anywhere; }
+  .footer-email { overflow-wrap: anywhere; }
 }
