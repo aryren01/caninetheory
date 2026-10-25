@@ -3,7 +3,7 @@
 A static marketing site for a dog training business, served by GitHub Pages at thecaninetheory.com. It has no framework and no build step: just `index.html`, `styles.css`, `script.js` and `images/`.
 
 ## Design rules (keep these consistent)
-- Colors: mustard yellow `#edd287` and teal `#7cb6b2` sections alternate, with navy `--navy` `#0b2554` (the logo images are this color too) for all text, buttons, lines, borders and icons. They're defined as CSS variables in `:root`.
+- Colors: mustard yellow `#edd287` and teal `#7cb6b2` sections alternate, with dark ink `#2b2b2b` for text, buttons, lines, borders and icons. They're defined as CSS variables in `:root`. The logo images are the original dark green.
 - Fonts: **Marcellus** for headings and **PT Serif** for body text, both loaded from Google Fonts.
 - Logo: `images/logo-mark.png` (dog and mountains, in the header next to the name), `images/logo.png` (full logo with text, transparent background) and `images/favicon.png` (browser tab icon).
 - Buttons are dark pill shapes (`.btn`). Service lists use `<details>` accordions inside `.accordion`.
