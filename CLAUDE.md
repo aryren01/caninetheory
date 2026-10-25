@@ -18,3 +18,4 @@ A static marketing site for a dog training business, served by GitHub Pages at t
 - The contact email is `hello@thecaninetheory.com` (in the footer of index.html and `CONTACT_EMAIL` in script.js).
 - The contact form posts to Formspree (`action` in index.html). `script.js` falls back to `mailto:` while the ID is still `YOUR_FORM_ID`.
 - Pushing to `main` publishes the site.
+- When you change `styles.css` or `script.js`, bump the `?v=` number on their links in `index.html` so browsers download the new file instead of using an old saved copy.
