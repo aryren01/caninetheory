@@ -56,7 +56,8 @@ p { margin: 0 0 1rem; }
   padding: 18px var(--gutter);
   background: var(--teal);
 }
-.logo { font-size: 1.8rem; color: var(--ink); text-decoration: none; }
+.logo { display: flex; align-items: center; gap: .8rem; font-size: 1.8rem; color: var(--ink); text-decoration: none; }
+.logo-mark { height: 52px; width: auto; }
 .site-nav { display: flex; gap: 2rem; }
 .site-nav a { color: var(--ink); text-decoration: none; }
 .site-nav a:hover { text-decoration: underline; }
@@ -193,6 +194,8 @@ p { margin: 0 0 1rem; }
   .btn { min-width: 0; width: 100%; }
   .accordion { margin-top: 2rem; }
 
+  .logo { font-size: 1.4rem; gap: .6rem; }
+  .logo-mark { height: 40px; }
   .nav-toggle { display: block; }
   .site-nav {
     display: none;
@@ -212,4 +215,5 @@ p { margin: 0 0 1rem; }
 
 @media (max-width: 500px) {
   .contact-form .row { grid-template-columns: 1fr; }
+  .footer-email { font-size: 1.2rem; overflow-wrap: anywhere; }
 }
