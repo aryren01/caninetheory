@@ -20,7 +20,7 @@ It's a plain HTML/CSS site with no build step:
 
 - [ ] **Photos:** replace the images in `images/` with the full-quality originals. The current ones were cropped from screenshots. Also add `images/hero.jpg` (leash photo) and `images/single-session.jpg` (curly black dog).
 - [ ] **Descriptions:** add text for "Good Manners Group Class" and "One-on-One Behavior Coaching" in `index.html`.
-- [ ] **Social links:** add the X, Instagram and Facebook profile URLs in `index.html`.
+- [ ] **Social links:** Instagram is done (@thecaninetheory). Add the X and Facebook profile URLs in `index.html`.
 - [x] **Email:** `hello@thecaninetheory.com` (Cloudflare Email Routing forwards it to her Gmail) is in `index.html` (footer) and `script.js` (`CONTACT_EMAIL`).
 - [ ] **Contact form:** create a free form at [formspree.io](https://formspree.io) and paste its ID over `YOUR_FORM_ID` in `index.html`. Until then, "Send" opens the visitor's email app.
 
