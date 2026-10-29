@@ -20,7 +20,7 @@ onScroll();
 
 // Fade sections in as they scroll into view, one item after another
 const revealTargets = document.querySelectorAll(
-  ".split-text > :not(.accordion), .accordion > details, .split-media, .about-text > *, .about-grid > img, " +
+  ".split-text > :not(.accordion), .accordion > details, .split-media, .about-text > *, .about-collage > img, " +
   ".section > h2, .section > .lead, .services > h2, .product, .socials, .gallery > *, .contact-form, .site-footer > div, " +
   ".profile > .profile-photo, .profile-text > *, .pet"
 );
