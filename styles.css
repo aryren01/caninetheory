@@ -1,8 +1,11 @@
-/* ===== Brand colors & fonts (matched to the Squarespace draft) ===== */
+/* ===== Brand colors & fonts ===== */
+/* White pages with the brand teal and yellow as accents (bars, photo blocks, buttons, header line, footer) */
 :root {
   --yellow: #edd287;
   --teal: #7cb6b2;
-  --ink: #2b2b2b;
+  --ink: #1a1a1a;
+  --line: #ece8dc;
+  --pop: 18px; /* how far the colored blocks behind photos stick out */
   --heading-font: "Marcellus", Georgia, serif;
   --body-font: "PT Serif", Georgia, serif;
   --gutter: clamp(20px, 4vw, 80px);
@@ -14,7 +17,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 90px; interpolate-size: allo
 
 body {
   margin: 0;
-  background: var(--yellow);
+  background: #fff;
   color: var(--ink);
   font-family: var(--body-font);
   font-size: 1.15rem;
@@ -41,8 +44,21 @@ p { margin: 0 0 1rem; }
 
 /* ===== Sections ===== */
 .section { position: relative; padding: clamp(60px, 8vw, 120px) var(--gutter); }
-.yellow { background: var(--yellow); }
-.teal { background: var(--teal); }
+/* Sections are white; "teal" and "yellow" now only pick the accent color of the bar above the heading */
+.teal { --accent: var(--teal); }
+.yellow { --accent: var(--yellow); }
+main .section + .section { border-top: 1px solid var(--line); }
+.section h2::before,
+.hero h1::before {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 6px;
+  border-radius: 3px;
+  margin-bottom: 1.4rem;
+  background: var(--accent);
+}
+.center h2::before { margin-left: auto; margin-right: auto; }
 .center { text-align: center; }
 
 /* ===== Header ===== */
@@ -54,7 +70,8 @@ p { margin: 0 0 1rem; }
   align-items: center;
   justify-content: space-between;
   padding: 18px var(--gutter);
-  background: var(--teal);
+  background: #fff;
+  border-bottom: 5px solid var(--teal);
   transition: box-shadow .3s;
 }
 .site-header.scrolled { box-shadow: 0 6px 24px rgba(43, 43, 43, .15); }
@@ -72,8 +89,8 @@ p { margin: 0 0 1rem; }
   padding: 1.6rem 2.5rem;
   border: 0;
   border-radius: 999px;
-  background: var(--ink);
-  color: #fff;
+  background: var(--teal);
+  color: var(--ink);
   font: inherit;
   font-size: 1.3rem;
   text-align: center;
@@ -81,7 +98,6 @@ p { margin: 0 0 1rem; }
   cursor: pointer;
   transition: opacity .2s, transform .3s, box-shadow .3s;
 }
-.teal .btn { color: var(--teal); }
 .btn:hover { opacity: .9; transform: translateY(-3px); box-shadow: 0 10px 24px rgba(43, 43, 43, .25); }
 .btn-wide { width: 100%; min-width: 0; padding: 1rem; font-size: 1rem; }
 
@@ -96,12 +112,14 @@ p { margin: 0 0 1rem; }
 .split-media { justify-self: end; width: 100%; max-width: 835px; }
 .split-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .hero .split-media img { aspect-ratio: 4 / 3; }
+/* Colored blocks set behind the photos */
+.split-media img, .about-img-right { box-shadow: var(--pop) var(--pop) 0 var(--yellow); }
+#board-and-train .split-media img, .product img { box-shadow: calc(var(--pop) * .8) calc(var(--pop) * .8) 0 var(--teal); }
+.about-img-left { box-shadow: calc(var(--pop) * -1) var(--pop) 0 var(--teal); }
 /* Each sentence of the headline stays on one line; the size scales with the text column so it always fits */
 .hero .split-text { container-type: inline-size; }
 .hero h1 { font-size: min(4.8rem, 9.2cqi); }
 .hero h1 span { display: block; white-space: nowrap; }
-/* The wave into the next section adds teal below the hero, so trim the bottom padding to keep the space even */
-.hero { padding-bottom: calc(clamp(60px, 8vw, 120px) - clamp(28px, 5vw, 72px) * .6); }
 
 /* ===== About ===== */
 .about-grid {
@@ -119,8 +137,8 @@ p { margin: 0 0 1rem; }
 .about-img-left { grid-area: left; width: 100%; max-width: 915px; aspect-ratio: 2 / 1; object-fit: cover; }
 
 /* ===== Accordions ===== */
-.accordion { margin: 5rem 0 1rem; border-top: 1px solid var(--ink); }
-.accordion details { border-bottom: 1px solid var(--ink); }
+.accordion { margin: 5rem 0 1rem; border-top: 2px solid var(--teal); }
+.accordion details { border-bottom: 1px solid var(--teal); }
 .accordion summary {
   list-style: none;
   display: flex;
@@ -167,16 +185,16 @@ p { margin: 0 0 1rem; }
 .contact-form legend { font-size: 1.3rem; margin-bottom: .5rem; padding: 0; }
 .contact-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .contact-form label { display: block; font-size: 1.2rem; margin-bottom: 1.2rem; }
-.req { opacity: .7; }
+.req { color: #555; }
 .contact-form input,
 .contact-form textarea {
   display: block;
   width: 100%;
   margin-top: .3rem;
   padding: .8rem 1rem;
-  border: 1px solid var(--ink);
+  border: 1px solid #9a9a9a;
   border-radius: 18px;
-  background: transparent;
+  background: #fff;
   font: inherit;
   color: var(--ink);
 }
@@ -190,30 +208,14 @@ p { margin: 0 0 1rem; }
   align-items: baseline;
   flex-wrap: wrap;
   gap: .5rem 2rem;
-  padding-top: clamp(48px, 6.5vw, 96px);
+  padding-top: 2rem;
   padding-bottom: 2rem;
+  background: var(--teal);
 }
 .footer-left { display: flex; align-items: baseline; gap: 1rem; }
 .footer-title { font-size: clamp(1.5rem, 2.2vw, 2.2rem); }
 .footer-left p { margin: 0; }
 .footer-email { font-family: var(--heading-font); font-size: clamp(1.3rem, 2vw, 2rem); color: var(--ink); text-decoration: none; }
-
-/* ===== Flow: wavy edges between sections ===== */
-/* Each section after the first gets a wave across its top in the color of the section above it. */
-main .section + .section::before,
-.site-footer::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  height: clamp(28px, 5vw, 72px);
-  background: no-repeat center top / 100% 100%;
-  pointer-events: none;
-}
-main .section.teal + .section::before,
-.site-footer::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%237cb6b2' d='M0 0h1440v30c-180 40-360 50-540 30S540 10 360 30 120 70 0 40z'/%3E%3C/svg%3E"); }
-main .section.yellow + .section::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%23edd287' d='M0 0h1440v40c-120 30-240 10-360-10S840 0 720 30 300 80 0 30z'/%3E%3C/svg%3E"); }
 
 /* ===== Flow: fade in while scrolling ===== */
 /* script.js adds .reveal to elements and .in once they scroll into view. The "js" class is set in <head>,
@@ -254,7 +256,8 @@ main .section.yellow + .section::before { background-image: url("data:image/svg+
     right: 0;
     flex-direction: column;
     gap: 0;
-    background: var(--teal);
+    background: #fff;
+    border-bottom: 5px solid var(--teal);
     padding: 0 var(--gutter) 1rem;
   }
   .site-nav.open { display: flex; }
@@ -270,6 +273,7 @@ main .section.yellow + .section::before { background-image: url("data:image/svg+
   .btn { min-width: 0; width: 100%; }
   .accordion { margin-top: 2rem; }
 
+  :root { --pop: 10px; }
   .logo { font-size: 1.4rem; gap: .6rem; }
   .logo-mark { height: 40px; }
 }

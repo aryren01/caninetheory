@@ -3,11 +3,11 @@
 A static marketing site for a dog training business, served by GitHub Pages at thecaninetheory.com. It has no framework and no build step: just `index.html`, `styles.css`, `script.js` and `images/`.
 
 ## Design rules (keep these consistent)
-- Colors: mustard yellow `#edd287` and teal `#7cb6b2` sections alternate, with dark ink `#2b2b2b` for text, buttons, lines, borders and icons. They're defined as CSS variables in `:root`. The logo images are the original dark green.
+- Colors: white backgrounds with near-black ink `#1a1a1a` text. The brand teal `#7cb6b2` and mustard yellow `#edd287` are accents only: the line under the header, the short bar above each heading (a section's `teal`/`yellow` class picks its color), the blocks set behind photos, the buttons (teal with ink text), the accordion lines and the teal footer. Never use teal or yellow for text on white; it's unreadable. Colors are CSS variables in `:root`. The logo images are the original dark green.
 - Fonts: **Marcellus** for headings and **PT Serif** for body text, both loaded from Google Fonts.
 - Logo: `images/logo-mark.png` (dog and mountains, in the header next to the name), `images/logo.png` (full logo with text, transparent background) and `images/favicon.png` (browser tab icon).
-- Buttons are dark pill shapes (`.btn`). Service lists use `<details>` accordions inside `.accordion`.
-- Sections flow into each other with wavy edges (the `::before` waves in styles.css, colored to match the section above). Keep teal and yellow alternating so the waves line up.
+- Buttons are teal pill shapes (`.btn`). Service lists use `<details>` accordions inside `.accordion`.
+- Sections are separated by a thin line (`--line`). The old wavy edges were removed when the site moved to white backgrounds.
 - Content fades up as it scrolls into view: script.js adds `.reveal`/`.in` to the elements listed in `revealTargets`. Add new elements there if they should animate. All motion is turned off for visitors with "reduce motion" set, and nothing is hidden if JavaScript doesn't run.
 - The design was copied from the owner's Squarespace draft, so new sections should match its look.
 - The site must work on phones. Check the `@media (max-width: 900px)` rules when changing layouts. The top menu folds into the ☰ button below 1150px (its own media query), so adding a menu link may need that number raised.
