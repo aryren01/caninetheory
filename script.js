@@ -18,10 +18,15 @@ const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
+// Gallery video: show the still poster instead for visitors who turn motion off
+if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.querySelectorAll(".gallery video").forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });
+}
+
 // Fade sections in as they scroll into view, one item after another
 const revealTargets = document.querySelectorAll(
   ".split-text > :not(.accordion), .accordion > details, .split-media, .about-text > *, .about-grid > img, " +
-  ".section > h2, .section > .lead, .services > h2, .product, .socials, .gallery > img, .contact-form, .site-footer > div, " +
+  ".section > h2, .section > .lead, .services > h2, .product, .socials, .gallery > *, .contact-form, .site-footer > div, " +
   ".profile-photo, .profile-text > *"
 );
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
