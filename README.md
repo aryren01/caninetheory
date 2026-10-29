@@ -18,7 +18,7 @@ It's a plain HTML/CSS site with no build step:
 
 ## Still to do
 
-- [ ] **Photos:** replace the images in `images/` with the full-quality originals. The current ones were cropped from screenshots. Also add `images/single-session.jpg` (curly black dog). The top photo (`images/hero.jpg`, treat pouch and toys) is done.
+- [ ] **Photos:** replace the images in `images/` with the full-quality originals. The current ones were cropped from screenshots. The top photo (`images/hero.jpg`, treat pouch and toys) is done.
 - [ ] **About page photo:** add a photo of Ary as `images/ary.jpg` (a portrait/tall photo works best). It shows on `about.html`; until then an empty frame with the logo appears.
 - [x] **Descriptions:** all three Additional Services (Puppy Starter Course, Good Manners Group Class, One-on-One Behavior Coaching) have their text.
 - [x] **Social links:** Instagram links to @thecaninetheory; Facebook uses her page's share link. (She isn't on X, so that icon was removed.)

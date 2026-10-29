@@ -18,11 +18,6 @@ const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
-// Gallery video: show the still poster instead for visitors who turn motion off
-if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  document.querySelectorAll(".gallery video").forEach((v) => { v.removeAttribute("autoplay"); v.pause(); });
-}
-
 // Fade sections in as they scroll into view, one item after another
 const revealTargets = document.querySelectorAll(
   ".split-text > :not(.accordion), .accordion > details, .split-media, .about-text > *, .about-grid > img, " +
