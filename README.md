@@ -22,7 +22,7 @@ It's a plain HTML/CSS site with no build step:
 - [x] **Descriptions:** all three Additional Services (Puppy Starter Course, Good Manners Group Class, One-on-One Behavior Coaching) have their text.
 - [x] **Social links:** Instagram links to @thecaninetheory; Facebook uses her page's share link. (She isn't on X, so that icon was removed.)
 - [x] **Email:** `hello@thecaninetheory.com` (Cloudflare Email Routing forwards it to her Gmail) is in `index.html` (footer) and `script.js` (`CONTACT_EMAIL`).
-- [ ] **Contact form:** create a free form at [formspree.io](https://formspree.io) and paste its ID over `YOUR_FORM_ID` in `index.html`. Until then, "Send" opens the visitor's email app.
+- [x] **Contact form:** submissions go through Formspree (form `xyeepbrv`) to her business Gmail. Manage it at formspree.io.
 
 ## Domain and email
 

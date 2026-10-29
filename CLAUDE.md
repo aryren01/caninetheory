@@ -16,6 +16,6 @@ A static marketing site for a dog training business, served by GitHub Pages at t
 ## Notes
 - Keep the `CNAME` file; GitHub Pages needs it for thecaninetheory.com. The domain's DNS and email forwarding live in Cloudflare (see README).
 - The contact email is `hello@thecaninetheory.com` (in the footer of index.html and `CONTACT_EMAIL` in script.js).
-- The contact form posts to Formspree (`action` in index.html). `script.js` falls back to `mailto:` while the ID is still `YOUR_FORM_ID`.
+- The contact form posts to Formspree form `xyeepbrv` (`action` in index.html), which emails each submission to her business Gmail. `script.js` sends it in the background and shows a thank-you message.
 - Pushing to `main` publishes the site.
 - When you change `styles.css` or `script.js`, bump the `?v=` number on their links in `index.html` so browsers download the new file instead of using an old saved copy.
