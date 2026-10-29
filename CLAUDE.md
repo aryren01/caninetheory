@@ -10,7 +10,7 @@ A static marketing site for a dog training business, served by GitHub Pages at t
 - Sections are separated by a thin line (`--line`). The old wavy edges were removed when the site moved to white backgrounds.
 - Content fades up as it scrolls into view: script.js adds `.reveal`/`.in` to the elements listed in `revealTargets`. Add new elements there if they should animate. All motion is turned off for visitors with "reduce motion" set, and nothing is hidden if JavaScript doesn't run.
 - The design was copied from the owner's Squarespace draft, so new sections should match its look.
-- The site must work on phones. Check the `@media (max-width: 900px)` rules when changing layouts. The top menu folds into the ☰ button below 1150px (its own media query), so adding a menu link may need that number raised.
+- The site must work on phones. Check the `@media (max-width: 900px)` rules when changing layouts. The top menu folds into the ☰ button below 1250px (its own media query), so adding a menu link may need that number raised.
 - The hero headline is two sentences, each kept on one line (`.hero h1 span`), sized to its column with `cqi` units.
 
 ## Notes

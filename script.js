@@ -21,7 +21,8 @@ onScroll();
 // Fade sections in as they scroll into view, one item after another
 const revealTargets = document.querySelectorAll(
   ".split-text > :not(.accordion), .accordion > details, .split-media, .about-text > *, .about-grid > img, " +
-  ".section > h2, .section > .lead, .services > h2, .product, .socials, .gallery > img, .contact-form, .site-footer > div"
+  ".section > h2, .section > .lead, .services > h2, .product, .socials, .gallery > img, .contact-form, .site-footer > div, " +
+  ".profile-photo, .profile-text > *"
 );
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver((entries) => {
@@ -44,9 +45,9 @@ if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: re
 // Until the form ID in index.html is set, "Send" opens the visitor's email app instead.
 const CONTACT_EMAIL = "hello@thecaninetheory.com";
 const form = document.getElementById("contact-form");
-const status = form.querySelector(".form-status");
 
-form.addEventListener("submit", async (e) => {
+form?.addEventListener("submit", async (e) => {
+  const status = form.querySelector(".form-status");
   e.preventDefault();
   const data = new FormData(form);
 
