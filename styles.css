@@ -158,6 +158,10 @@ main .section + .section { border-top: 1px solid var(--line); }
 }
 .profile-text p { max-width: 40em; }
 .profile-text .btn { margin-top: 2rem; }
+.pets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; margin-top: 3rem; }
+.pet .profile-photo { margin-bottom: calc(var(--pop) + 1.5rem); }
+.pet h3 { margin-bottom: .2rem; }
+.pet-role { font-style: italic; margin-bottom: 1rem; }
 .site-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
 
 /* ===== About ===== */
@@ -308,7 +312,7 @@ main .section + .section { border-top: 1px solid var(--line); }
   .profile { gap: 3rem; }
   .about-grid { grid-template-areas: "text" "right" "left"; }
   .split-media { justify-self: stretch; }
-  .products { grid-template-columns: 1fr; }
+  .products, .pets { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .btn { min-width: 0; width: 100%; }
   .accordion { margin-top: 2rem; }

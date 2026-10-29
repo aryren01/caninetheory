@@ -22,7 +22,7 @@ onScroll();
 const revealTargets = document.querySelectorAll(
   ".split-text > :not(.accordion), .accordion > details, .split-media, .about-text > *, .about-grid > img, " +
   ".section > h2, .section > .lead, .services > h2, .product, .socials, .gallery > *, .contact-form, .site-footer > div, " +
-  ".profile-photo, .profile-text > *"
+  ".profile > .profile-photo, .profile-text > *, .pet"
 );
 if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const observer = new IntersectionObserver((entries) => {
