@@ -113,9 +113,10 @@ main .section + .section { border-top: 1px solid var(--line); }
 .split-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .hero .split-media img { aspect-ratio: 4 / 3; }
 /* Colored blocks set behind the photos */
-.split-media img, .about-img-right { box-shadow: var(--pop) var(--pop) 0 var(--yellow); }
+.split-media img { box-shadow: var(--pop) var(--pop) 0 var(--yellow); }
+.about-img-right { box-shadow: calc(var(--pop) * .6) calc(var(--pop) * .6) 0 var(--yellow); }
 #board-and-train .split-media img, .product img { box-shadow: calc(var(--pop) * .8) calc(var(--pop) * .8) 0 var(--teal); }
-.about-img-left { box-shadow: calc(var(--pop) * -1) var(--pop) 0 var(--teal); }
+.about-img-left { box-shadow: calc(var(--pop) * -.6) calc(var(--pop) * .6) 0 var(--teal); }
 /* Each sentence of the headline stays on one line; the size scales with the text column so it always fits */
 .hero .split-text { container-type: inline-size; }
 .hero h1 { font-size: min(4.8rem, 9.2cqi); }
@@ -177,8 +178,8 @@ main .section + .section { border-top: 1px solid var(--line); }
 .about-text { grid-area: text; }
 .about-text h2 { margin-bottom: 1rem; }
 .about-text p { margin-bottom: 3rem; max-width: 40em; }
-.about-img-right { grid-area: right; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
-.about-img-left { grid-area: left; width: 100%; max-width: 915px; aspect-ratio: 2 / 1; object-fit: cover; }
+.about-img-right { grid-area: right; justify-self: end; width: 100%; max-width: 380px; aspect-ratio: 3 / 4; object-fit: cover; }
+.about-img-left { grid-area: left; width: 100%; max-width: 600px; aspect-ratio: 2 / 1; object-fit: cover; }
 
 /* ===== Accordions ===== */
 .accordion { margin: 5rem 0 1rem; border-top: 2px solid var(--teal); }
@@ -312,6 +313,7 @@ main .section + .section { border-top: 1px solid var(--line); }
   .split, .services, .about-grid, .profile { grid-template-columns: 1fr; }
   .profile { gap: 3rem; }
   .about-grid { grid-template-areas: "text" "right" "left"; }
+  .about-img-right { justify-self: start; max-width: 300px; }
   .split-media { justify-self: stretch; }
   .products, .pets { grid-template-columns: 1fr; }
   .pets { max-width: 280px; }
